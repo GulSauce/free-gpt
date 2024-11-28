@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY .env /code/.env
 
-COPY ./ /code/
+COPY ./app /code/app
 
-CMD ["chainlit", "run" ,"main.py", "-w"]
+CMD ["chainlit", "run" ,"app/main.py", "--host", "0.0.0.0"]

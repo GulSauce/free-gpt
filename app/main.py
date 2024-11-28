@@ -1,6 +1,5 @@
 import chainlit as cl
 from chainlit import user_session
-
 from config.ai_config import client
 from config.boto3_config import FileUploadInfo, upload_image_return_url
 
