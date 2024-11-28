@@ -91,6 +91,7 @@ def make_user_content_to_chat_format(content:str):
     }
 
 def make_assistant_content_to_chat_format(content:str):
+    print(content)
     return {
         "content": content,
         "role": "assistant"
