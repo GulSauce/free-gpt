@@ -10,4 +10,6 @@ COPY .env /code/.env
 
 COPY ./app /code/app
 
+COPY ./.chainlit /code/.chainlit
+
 CMD ["chainlit", "run" ,"app/main.py", "--host", "0.0.0.0"]
