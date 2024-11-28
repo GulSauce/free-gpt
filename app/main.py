@@ -78,12 +78,13 @@ def save_to_history(user_content:str, assistant_content:str):
     user_chat_format = make_user_content_to_chat_format(user_content)
     assistant_chat_format = make_assistant_content_to_chat_format(assistant_content)
     histories = cl.user_session.get("history")
-    if len(histories) > 4:
+    if len(histories) > 3:
         histories.pop(0)
     histories.append(user_chat_format)
     histories.append(assistant_chat_format)
 
 def make_user_content_to_chat_format(content:str):
+    print(content)
     return {
         "content": content,
         "role": "user"
